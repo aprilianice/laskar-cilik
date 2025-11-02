@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Guru - Laskar Cilik</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Laskar<br />Cilik</h2>
+      </div>
+      <nav>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="dashboard.html" class="active">
+              <span class="icon">📊</span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="daftarCatatan.html">
+              <span class="icon">📋</span>
+              <span>Daftar Catatan</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="sidebar-close-btn" id="sidebarCloseBtn">&lt;</button>
+    </aside>
+
+    <!-- TAB BUTTON -->
+    <button class="sidebar-tab" id="sidebarTab">
+      <span class="icon">☰</span>
+      <span>M<br />E<br />N<br />U</span>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <header class="header">
+        <h1>Dashboard Guru</h1>
+
+        <div class="header-actions">
+          <div class="user-profile"></div>
+        </div>
+      </header>
+
+      <!-- Stats -->
+      <div class="stats-container">
+        <div class="stat-card">
+          <h4>Total Guru</h4>
+          <h2>03</h2>
+          <small>+4% (30 hari)</small>
+        </div>
+
+        <div class="stat-card">
+          <h4>Total Siswa</h4>
+          <h2>40</h2>
+          <small>+2% (semester lalu)</small>
+        </div>
+
+        <div class="stat-card">
+          <h4>Data Catatan</h4>
+          <h2>25</h2>
+          <small>+2% (30 hari)</small>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="charts-container">
+        <div class="chart-card">
+          <h3>Catatan Mingguan</h3>
+          <canvas id="pencatatanChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h3>Perkembangan Jumlah Siswa</h3>
+          <canvas id="growthChart"></canvas>
+        </div>
+      </div>
+
+      <!-- genderchart -->
+      <div class="chart-card">
+        <h3>Siswa</h3>
+        <div class="gender-charts">
+          <div class="gender-item">
+            <canvas id="boysChart"></canvas>
+            <p><strong>53%</strong> Laki-laki</p>
+          </div>
+          <div class="gender-item">
+            <canvas id="girlsChart"></canvas>
+            <p><strong>47%</strong> Perempuan</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
