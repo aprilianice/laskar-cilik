@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Catatan</title>
+    <link rel="stylesheet" href="css/daftarCatatan.css" />
+  </head>
+  
+  <body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Laskar<br />Cilik</h2>
+      </div>
+      <nav>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="#dashboard">
+              <span class="icon">📊</span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#daftar-catatan" class="active">
+              <span class="icon">📋</span>
+              <span>Daftar Catatan</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!-- CLOSE BUTTON -->
+      <button class="sidebar-close-btn" id="sidebarCloseBtn">&lt;</button>
+    </aside>
+
+    <!-- TAB BUTTON -->
+    <button class="sidebar-tab" id="sidebarTab">
+      <span class="icon">☰</span>
+      <span>M<br />E<br />N<br />U</span>
+    </button>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="mainContent">
+      <div class="header">
+        <h1>Catatan Perkembangan Siswa</h1>
+        <div class="user-profile"></div>
+      </div>
+
+      <div class="content-container">
+        <!-- CONTROLS -->
+        <div class="controls">
+          <button class="add-button" id="addButton">Tambah Catatan</button>
+
+          <div class="filter-section">
+            <input
+              type="text"
+              class="date-input"
+              id="startDate"
+              placeholder="mm/dd/yyyy"
+            />
+            <span>-</span>
+            <input
+              type="text"
+              class="date-input"
+              id="endDate"
+              placeholder="mm/dd/yyyy"
+            />
+            <button class="filter-button" id="filterButton">
+              <span>🔍</span> Filter
+            </button>
+            <button class="clear-filter-button" id="clearFilterButton">
+              Hapus Filter
+            </button>
+            <input
+              type="text"
+              class="search-input"
+              id="searchInput"
+              placeholder="🔍 Cari berdasarkan Nama"
+            />
+          </div>
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Kelas</th>
+                <th>Semester</th>
+                <th>Tahun Ajaran</th>
+                <th>Tanggal Pencatatan</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+     <!-- TEMPAT MENAMPILKAN DIALOG -->
+    <div id="container-dialog"></div>
+
+    <script src="js/daftarCatatan.js"></script>
+    <script src="js/integrasiDetail.js"></script>
+    
+  </body>
+</html>
