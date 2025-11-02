@@ -1,0 +1,156 @@
+/* Font utama */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8fafc;
+    margin: 0;
+    padding: 40px;
+}
+
+/* Tombol utama */
+.tombol-detail {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    transition: background-color 0.3s;
+}
+
+.tombol-detail:hover {
+    background-color: #0066d1;
+}
+
+/* Latar belakang item transparan */
+.latar-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+/* Dialog utama */
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px; 
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* Header dialog */
+.header-dialog {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaf3ff;
+    padding: 14px 18px;
+    border-bottom: 1px solid #d6e4ff;
+}
+
+.header-dialog h2 {
+    margin: 0;
+    color: #1458d6;
+    font-size: 16px;
+   
+}
+
+/* Tombol tutup (X) agar mirip Figma */
+.tombol-tutup {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #555;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.tombol-tutup:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Isi dialog */
+.isi-dialog {
+    padding: 16px 18px 24px;
+    background-color: #f7fbff;
+}
+
+/* Tombol cetak */
+.tombol-cetak {
+    background-color: #C73A3A;
+    color: white;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 18px;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.tombol-cetak:hover {
+    background-color: #a82f2f;
+}
+
+/* Kotak data */
+.kotak-data {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    border: 1px solid #4e74a9;
+    padding: 14px 16px;
+}
+
+.baris-data {
+    margin-bottom: 10px ;
+}
+
+.baris-data p {
+    margin: 3px 0 ;
+    line-height: 1.45;
+    font-size: 13.5px;
+}
+
+/* Garis pemisah antar bagian */
+.kotak-data hr {
+    border: none;
+    border-top: 1px dashed #1d3b6b;
+    margin: 10px 0;
+}
+
+/* Responsif */
+@media (max-width: 480px) {
+    .dialog {
+        width: 90%;
+    }
+
+    .isi-dialog {
+        padding: 14px;
+    }
+
+    .header-dialog h2 {
+        font-size: 15px;
+    }
+
+    .baris-data p {
+        font-size: 13px;
+    }
+}
+
+/* Sembunyikan dialog */
+.disembunyikan {
+    display: none;
+}
