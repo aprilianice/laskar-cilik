@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laskar Cilik - Tambah Catatan Perkembangan Siswa</title>
+    <link rel="stylesheet" href="css/tambah.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo"><h2>Laskar<br>Cilik</h2></div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M9 11H15M9 15H15M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5Z"></path>
+                    </svg>
+                    Data Catatan
+                </a>
+                <div class="nav-footer-text">
+                    <p class="copyright">Laskar Cilik Guru Dashboard<br>© 2025 All Rights Reserved</p>
+                    <p class="made-by">Made with ❤️ by Lantas</p>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="back-button" id="backBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Tambah Catatan Perkembangan Siswa</h1>
+                <div class="user-profile">
+                    <button class="logout-button" id="logoutBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Logout
+                    </button>
+                    <div class="avatar"></div>
+                </div>
+            </header>
+
+            <form class="form-container" id="studentForm">
+                <div class="form-group">
+                    <label for="namaLengkap">Nama Lengkap</label>
+                    <select id="namaLengkap" required>
+                        <option value="student1">Deswita Syaharani</option>
+                        <option value="student2">Ahmad Fauzi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="kelas">Kelas</label>
+                    <input type="text" id="kelas" value="A" required>
+                </div>
+                <div class="form-group">
+                    <label for="semester">Semester</label>
+                    <input type="number" id="semester" value="1" min="1" max="2" required>
+                </div>
+                <div class="form-group">
+                    <label for="tahunAjaran">Tahun Ajaran</label>
+                    <input type="text" id="tahunAjaran" value="2024/2025" required>
+                </div>
+
+                <div class="form-group-pair">
+                    <div class="form-group">
+                        <label for="nilaiAgama">Nilai Agama</label>
+                        <input type="text" id="nilaiAgama">
+                    </div>
+                    <div class="form-group">
+                        <label for="deskripsiAgama">Deskripsi Nilai Agama</label>
+                        <textarea id="deskripsiAgama" rows="3" placeholder="Deskripsi perkembangan nilai agama..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group-pair">
+                    <div class="form-group">
+                        <label for="nilaiJatiDiri">Nilai Jati Diri</label>
+                        <input type="text" id="nilaiJatiDiri">
+                    </div>
+                    <div class="form-group">
+                        <label for="deskripsiJatiDiri">Deskripsi Nilai Jati Diri</label>
+                        <textarea id="deskripsiJatiDiri" rows="3" placeholder="Deskripsi perkembangan nilai jati diri..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group-pair">
+                    <div class="form-group">
+                        <label for="nilaiSTEM">Nilai STEM</label>
+                        <input type="text" id="nilaiSTEM">
+                    </div>
+                    <div class="form-group">
+                        <label for="deskripsiSTEM">Deskripsi Nilai STEM</label>
+                        <textarea id="deskripsiSTEM" rows="3" placeholder="Deskripsi perkembangan nilai STEM..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group-pair">
+                    <div class="form-group">
+                        <label for="nilaiPancasila">Nilai Pancasila</label>
+                        <input type="text" id="nilaiPancasila">
+                    </div>
+                    <div class="form-group">
+                        <label for="deskripsiPancasila">Deskripsi Nilai Pancasila</label>
+                        <textarea id="deskripsiPancasila" rows="3" placeholder="Deskripsi perkembangan nilai pancasila..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Simpan</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="js/tambah.js"></script>
+</body>
+</html>
