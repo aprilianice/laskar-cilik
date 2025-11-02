@@ -1,0 +1,46 @@
+<div id="latarDialog" class="latar-dialog disembunyikan" aria-hidden="true"></div>
+
+<!-- Dialog utama -->
+<div id="dialogDetail" class="dialog disembunyikan" role="dialog" aria-modal="true" aria-labelledby="judulDialog" tabindex="-1">
+  <!-- Header dialog -->
+  <div class="header-dialog">
+    <h2 id="judulDialog">Detail Pencatatan</h2>
+    <!-- tombol tutup -->
+    <button id="tutupDialog" class="tombol-tutup" aria-label="Tutup dialog">&times;</button>
+  </div>
+
+  <!-- Isi dialog -->
+  <div class="isi-dialog" id="isiDialog">
+    <!-- Tombol cetak (ini buat menghubungkan ke js yang memanggil jsPDF) -->
+    <div class="toolbar">
+      <button id="tombolCetakPDF" class="tombol-cetak" type="button">Cetak PDF</button>
+    </div>
+
+    <!-- Kotak data: bagian ini akan diisi secara dinamis oleh integrasiDetail.js -->
+    <div class="kotak-data" id="kotakDataUtama">
+      <!-- Data umum siswa (placeholder — akan diisi) -->
+      <div class="baris-data">
+        <p><strong>Nama:</strong> <span id="dataNama"></span></p>
+        <p><strong>Kelas:</strong> <span id="dataKelas"></span></p>
+        <p><strong>Semester:</strong> <span id="dataSemester"></span></p>
+        <p><strong>Tahun Ajaran:</strong> <span id="dataTahun"></span></p>
+      </div>
+
+      <hr>
+
+      <!-- Area untuk daftar nilai dan deskripsi; integrasi akan menambahkan elemen di sini -->
+      <div id="daftarNilai">
+        <!-- Contoh struktur yang akan ditambahkan:
+        <div class="baris-data">
+          <p><strong>Nilai Agama dan Budi Pekerti:</strong> <span>Baik</span></p>
+          <p><strong>Deskripsi:</strong></p>
+          <p>Deskripsi panjang ...</p>
+        </div>
+        <hr>
+        -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
